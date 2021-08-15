@@ -1,0 +1,85 @@
+/* HEADER */
+
+.site-header {
+  background-color: $midnight-green;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 73px;
+  padding-bottom: 129px;
+}
+
+.header__logo-link {
+  @include link-unstyled;
+}
+
+.header__logo-img {
+  display: block;
+  width: 160px;
+  height: 40px;
+}
+
+.header__contact-link {
+  @include link-unstyled;
+  display: block;
+  margin-left: auto;
+  padding-top: 9px;
+  padding-right: 33px;
+  padding-bottom: 11px;
+  padding-left: 32px;
+  border: 2px solid $white;
+  border-radius: 27px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: $white;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.header__contact-link:hover {
+  color: $dark-green;
+  background-color: $white;
+}
+
+.header__toggler-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.header__toggler-img {
+  display: block;
+  width: 20px;
+  height: 17px;
+}
+
+@include breakpoint-down (768px) {
+  .header {
+    padding-top: 64px;
+    padding-bottom: 112px;
+  }
+  .header__logo-img {
+    width: 128px;
+    height: 32px;
+  }
+}
+
+@include breakpoint-down (640px) {
+  .header {
+    padding-top: 48px;
+    padding-bottom: 87px;
+  }
+
+  .header__contact-link {
+    display: none;
+  }
+  
+  .header__toggler-btn {
+    display: block;
+  }
+}

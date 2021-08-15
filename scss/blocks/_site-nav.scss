@@ -1,0 +1,33 @@
+/* SITE-NAV */
+
+.site-nav__list {
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 80px;
+}
+
+.site-nav__item ~ .site-nav__item {
+  margin-left: 40px;
+}
+
+.site-nav__link {
+  @include link-unstyled;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: $white;
+  transition: color 0.3s ease;
+}
+
+.site-nav__link:hover {
+  color: $light-coral;
+}
+
+@include breakpoint-down (640px) {
+  .site-nav {
+    display: none;
+  }
+}

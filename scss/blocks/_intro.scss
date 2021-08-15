@@ -1,0 +1,174 @@
+/* INTRO SECTION */
+
+.intro-section {
+  background-color: $midnight-green;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 250px;
+  background-image: url(../../img/hero-right-bg.png);
+  background-repeat: no-repeat;
+  background-size: 358px 200px;
+  background-position: bottom -100px right;
+}
+
+.intro__left {
+  width: 600px;
+  position: relative;
+}
+
+.intro__left::before {
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: -265px;
+  background-image: url(../../img/hero-left-bg.png);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: center;
+  content: "";
+}
+
+.intro__heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 100px;
+  color: $white;
+  margin: 0;
+}
+
+.intro__heading-red {
+  color: $light-coral;
+}
+
+.intro__right {
+  width: 445px;
+}
+
+.intro__right::before {
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: $rapture-blue;
+  margin-bottom: 79px;
+  content: "";
+}
+
+.intro__text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: $white;
+}
+
+@include breakpoint-down (1000px) {
+  .intro__heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .intro__left {
+    width: 49%;
+  }
+
+  .intro__left::before {
+    display: none;
+  }
+
+  .intro__right {
+    width: 49%;
+  }
+
+  .intro__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .intro__right::before {
+    margin-bottom: 34px;
+  }
+}
+
+@include breakpoint-down (768px) {
+  .intro {
+    flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-position: bottom -100px center;
+  }
+
+  .intro__left {
+    width: 100%;
+  }
+
+  .intro__heading {
+    font-size: 64px;
+    line-height: 56px;
+  }
+
+  .intro__right {
+    width: 100%;
+  }
+
+  .intro__right::before {
+    display: none;
+  }
+
+  .intro__text {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+@include breakpoint-down (680px) {
+  .intro {
+    width: 98%;
+  }
+}
+
+@include breakpoint-down (640px) {
+  .intro-section {
+    background-image: url(../../img/hero-right-bg.png);
+    background-repeat: no-repeat;
+    background-size: 358px 200px;
+    background-position: bottom -100px center;
+  }
+  
+  .intro {
+    width: 100%;
+    background-image: none;
+    padding-bottom: 197px;
+  }
+}
+
+
+@include breakpoint-down (465px) {
+  .intro__heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .intro__text {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+@include breakpoint-down (374px) {
+  .intro-section {
+    background-size: 300px 170px;
+    background-position: bottom -85px center;
+  }
+}

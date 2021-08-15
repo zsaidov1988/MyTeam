@@ -1,0 +1,86 @@
+/* READY SECTION */
+
+.ready-section {
+  background-color: $light-coral;
+  &__bg {
+    width: 100%;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../../img/ready-bg.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+  &__heading {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    color: $sacramento-state-green;
+  }
+  &__contact-link {
+    @include link-unstyled;
+    display: block;
+    padding-top: 9px;
+    padding-right: 33px;
+    padding-bottom: 11px;
+    padding-left: 32px;
+    border: 2px solid $sacramento-state-green;
+    border-radius: 27px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $sacramento-state-green;
+    transition: color 0.3s ease, background 0.3s ease;
+    &:hover {
+      color: $white;
+      background-color: $sacramento-state-green;
+    }
+  }
+}
+
+@include breakpoint-down (1200px) {
+  .ready-section {
+    &__wrapper {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@include breakpoint-down (1100px) {
+  .ready-section {
+    &__bg {
+      background-position: left bottom -21px;
+    }
+    &__wrapper {
+      justify-content: space-around;
+      padding-top: 83px;
+      padding-bottom: 83px;
+    }
+    &__heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+}
+
+@include breakpoint-down (660px) {
+  .ready-section {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__heading {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  }
+}
