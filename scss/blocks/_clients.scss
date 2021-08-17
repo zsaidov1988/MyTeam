@@ -1,0 +1,96 @@
+/* CLIENTS SECTION */
+
+.clients-section {
+  background-color: $sacramento-state-green;
+  background-image: url(../../img/clients-bg.png);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: calc(50% - 600px) top;
+}
+
+.clients-section__wrapper {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.clients-section__heading {
+  margin: 0;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: $white;
+}
+
+.clients-section__list {
+  @include list-unstyled;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clients-section__link {
+  @include link-unstyled;
+  display: inline-block;
+}
+
+@include breakpoint-between (600px, 920px) {
+  .clients-section__img--verge {
+    width: 103px;
+    height: 17px;
+  }
+  .clients-section__img--jakarta {
+    width: 114px;
+    height: 14px;
+  }
+  .clients-section__img--guardian {
+    width: 112px;
+    height: 17px;
+  }
+  .clients-section__img--techradar {
+    width: 103px;
+    height: 17px;
+  }
+  .clients-section__img--gadgets {
+    width: 61px;
+    height: 28px;
+  }
+
+  .clients-section__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .clients-section__heading {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  
+  .clients-section {
+    background-position: left top -100px;
+  }
+}
+
+@include breakpoint-down (600px) {
+  .clients-section {
+    background-position: left -100px top -100px;
+  }
+
+  .clients-section__wrapper {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .clients-section__heading {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .clients-section__list {
+    flex-direction: column;
+  }
+
+  .clients-section__item ~ .clients-section__item {
+    margin-top: 50px;
+  }
+}

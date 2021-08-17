@@ -2,6 +2,10 @@
 
 .intro-section {
   background-color: $midnight-green;
+  background-image: url(../../img/hero-left-bg.png);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: calc(50% - 698px) calc(50% - 124px);
 }
 
 .intro {
@@ -18,20 +22,6 @@
 .intro__left {
   width: 600px;
   position: relative;
-}
-
-.intro__left::before {
-  display: block;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 0;
-  left: -265px;
-  background-image: url(../../img/hero-left-bg.png);
-  background-repeat: no-repeat;
-  background-size: 200px 200px;
-  background-position: center;
-  content: "";
 }
 
 .intro__heading {
@@ -77,10 +67,6 @@
 
   .intro__left {
     width: 49%;
-  }
-
-  .intro__left::before {
-    display: none;
   }
 
   .intro__right {
