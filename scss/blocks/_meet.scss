@@ -68,6 +68,11 @@
   padding-right: 48px;
   padding-bottom: 50px;
   padding-left: 48px;
+  transition: background 0.4s ease;
+}
+
+.meet-section__item:hover .meet-section__item-box {
+  background-color: $dark-green;
 }
 
 .meet-section__item-content {
