@@ -22,17 +22,10 @@
   color: #FFFFFF;
 }
 
-.meet-section__list {
-  @include list-unstyled;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .meet-section__item {
   margin-bottom: 76px;
   position: relative;
+  text-align: center;
 }
 
 .meet-section__item-circle {
