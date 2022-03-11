@@ -1,13 +1,22 @@
 version: '3'
 services:
-  web:
+  myteam:
     image: nginx
+    container_name: myteam
+    restart: unless-stopped
     # command: rm /usr/share/nginx/html/index.html
     volumes:
       - ./templates:/etc/nginx/templates
       - .:/usr/share/nginx/html/
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.myteam.rule=Host(`myteam.zafardevops.uz`)"
+      - "traefik.http.routers.myteam.entrypoints=websecure"
+      - "traefik.http.routers.myteam.tls.certresolver=letsencrypt"
+      - "traefik.http.services.myteam.loadbalancer.server.port=4005"
+      - "traefik.docker.network=nt_default"
     ports:
-      - "8090:80"
+      - "4005:80"
     environment:
       # - NGINX_HOST=foobar.com
       - NGINX_PORT=80
